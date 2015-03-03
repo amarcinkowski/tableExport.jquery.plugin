@@ -74,7 +74,7 @@ THE SOFTWARE.*/
 					if(defaults.consoleLog == 'true'){
 						console.log(tdData);
 					}
-					var base64data = "base64," + $.base64.encode(tdData);
+					var base64data = "base64," + Base64.encode(tdData);
 					window.open('data:application/'+defaults.type+';filename=exportData;' + base64data);
 				}else if(defaults.type == 'sql'){
 				
@@ -118,7 +118,7 @@ THE SOFTWARE.*/
 						console.log(tdData);
 					}
 					
-					var base64data = "base64," + $.base64.encode(tdData);
+					var base64data = "base64," + Base64.encode(tdData);
 					window.open('data:application/sql;filename=exportData;' + base64data);
 					
 				
@@ -167,7 +167,7 @@ THE SOFTWARE.*/
 					if(defaults.consoleLog == 'true'){
 						console.log(JSON.stringify(jsonExportArray));
 					}
-					var base64data = "base64," + $.base64.encode(JSON.stringify(jsonExportArray));
+					var base64data = "base64," + Base64.encode(JSON.stringify(jsonExportArray));
 					window.open('data:application/json;filename=exportData;' + base64data);
 				}else if(defaults.type == 'xml'){
 				
@@ -208,7 +208,7 @@ THE SOFTWARE.*/
 						console.log(xml);
 					}
 					
-					var base64data = "base64," + $.base64.encode(xml);
+					var base64data = "base64," + Base64.encode(xml);
 					window.open('data:application/xml;filename=exportData;' + base64data);
 
 				}else if(defaults.type == 'excel' || defaults.type == 'doc'|| defaults.type == 'powerpoint'  ){
